@@ -9,6 +9,6 @@ public class NotificationMessageSubscriber {
 
     @RabbitListener(queues = {"${notifications.queue}"})
     public void receiveMessageFromTopic1(NotificationData data) {
-    System.out.println("Received data from RabbitMq = " + data.toString());
+    System.err.println("Received data from RabbitMq = " + data.toString());
     }
 }

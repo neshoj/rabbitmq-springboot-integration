@@ -16,7 +16,7 @@ public class PostMessageController {
   @RequestMapping(path = "/notification")
   public ResponseEntity postMessage(@RequestBody NotificationData request) {
     notificationSender.sendNotification(request);
-    System.out.println("Message already sent to MQ");
+    System.err.println("Message already sent to MQ");
     return ResponseEntity.status(200).build();
   }
 }

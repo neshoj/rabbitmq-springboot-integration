@@ -20,6 +20,6 @@ public class NotificationSender {
 
     public void sendNotification(NotificationData request) {
         rabbitTemplate.convertAndSend(topicExchangeName, routingKeyName, request);
-        System.out.println("Notification message sent: " + request.getMessageBody());
+        System.err.println("Notification message sent: " + request.getMessageBody());
     }
 }
